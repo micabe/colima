@@ -44,7 +44,7 @@ func newConf(ctx context.Context, conf config.Config) (l Config, err error) {
 		l.SSH = SSH{LocalPort: 0, LoadDotSSHPubKeys: false, ForwardAgent: conf.ForwardAgent}
 	}
 	l.Containerd = Containerd{System: false, User: false}
-	l.Firmware.LegacyBIOS = false
+	l.Firmware.LegacyBIOS = true
 
 	l.DNS = conf.DNS
 
